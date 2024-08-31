@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+    <style>
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: hwb(0 81% 19%);
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(253, 6, 6);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  color: rgb(27, 6, 253);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+select {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"],
+        input[type="reset"],
+        .S {
+            width: 48%;
+            padding: 12px;
+            
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"],
+        .S {
+            background-color: #6a11cb;
+            color: #fff;
+        }
+
+        input[type="submit"]:hover,
+        .S:hover {
+            background-color: #4a0eb0;
+        }
+
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+
+@media only screen and (max-width: 768px) {
+  form {
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  form {
+    padding: 10px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  textarea {
+    height: 30px;
+  }
+}
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Sign Up</h2>
+
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div><br>
+        <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div><br>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div><br>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div><br>
+        <div class="form-group">
+          <label for="mobile">Mobile Number:</label>
+          <input type="tel" id="mobile" name="mobile" required>
+        </div><br>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+        </div><br>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="">Select Country</option>
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="Mexico">Mexico</option>
+              <option value="China">China</option>
+              <option value="Nepal">Nepal</option>
+              <option value="India">India</option>
+            </select>           
+        </div><br>
+        <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+        </div><br>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required>
+        </div><br>
+        <div class="form-group">
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" name="zip" required>
+        </div><br>
+        <div class="form-group">
+            <button onClick="goToAnotherPage('hello')" class="S">Submit</button>
+
+        <script>
+              function goToAnotherPage(param) {
+              window.location.href = 'payment.html?param=' + param;
+              }
+        </script></div>
+        <div>
+            <input type="reset" value="Clear" class="reset">
+        </div><br>
+    </form>
+</body>
+        </form>
+    </body>
+</html>

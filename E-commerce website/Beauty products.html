@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #232f3e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #232f3e;
+            padding: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 12px;
+        }
+        .nav a:hover {
+            background-color: #485769;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 10px;
+            border: none;
+            background-color: #f0c14b;
+            cursor: pointer;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .buttonA{
+        background-color: rgb(200,0,0);
+        color: white;
+            border: none;
+          height: 36px;
+         width: 105px;
+         border-radius: 2px;
+             cursor: pointer;
+         transition: opacity 1s;
+}
+        .product img {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        .product h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .product .price {
+            color: #b12704;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .footer {
+            background-color: #232f3e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Furniture</h1>
+    </div>
+
+    
+    
+
+    <div class="product-grid">
+        <div class="product">
+            <img src="tb.jpg">
+            <h2>table</h2>
+            <p>Buy at low price</p>
+            <div class="price">₹1599</div>
+            <a href="form.html"><button class="buttonA">Add Cart</button></a>
+        </div>
+        <div class="product">
+            <img src="ch.jpg" alt="Product 2">
+            <h2>Chair</h2>
+            <p>buy one get one free</p>
+            <div class="price">₹990</div>
+            <a href="form.html"><button class="buttonA">Add Cart</button></a>
+            
+        </div>
+        <div class="product">
+            <img src="sho.jpg" alt="protien">
+            <h2>shoe rack</h2>
+            <p>25 % off</p>
+            <div class="price">₹999</div>
+            <a href="form.html"><button class="buttonA">Add Cart</button></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 My Store. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

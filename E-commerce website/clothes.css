@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #232f3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Product Section */
+  .products {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 10px;
+    vertical-align: top;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .product p {
+    color: #333;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  .footer {
+    background-color: #232f3e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.buttonA{
+    background-color: rgb(200,0,0);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 1s;
+}
+  .product p:last-child {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* Footer Section */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+  }

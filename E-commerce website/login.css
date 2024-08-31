@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    color: white;
+}
+
+.form-toggle button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 15px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.form-toggle button.active {
+    background: #555;
+}
+
+.form {
+    display: none;
+    padding: 20px;
+}
+
+.form.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+    position: relative;
+}
+
+.form-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    color: white;
+}
+
+.form-toggle button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 15px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.form-toggle button.active {
+    background: #555;
+}
+
+.form {
+    display: none;
+    padding:
+
+
+button {
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}

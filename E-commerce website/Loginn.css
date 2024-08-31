@@ -1,0 +1,166 @@
+/* Full-page background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: ('') no-repeat center center fixed;
+    background-size: cover;
+    animation: fadeInBackground 1s ease-in-out;
+  }
+  
+  /* Fade-in animation for background */
+  @keyframes fadeInBackground {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 0.9;
+    }
+  }
+  
+  /* Center the login container */
+  .background {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+  }
+  
+  .login-container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(63, 45, 228, 0.841);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideIn 0.6s forwards;
+  }
+  
+  /* Slide-in animation for the login container */
+  @keyframes slideIn {
+    from {
+        opacity: 0;
+   
+    }
+    to {
+        opacity: 1;
+        
+    }
+  }
+  
+  /* Heading styles */
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #5baadf;
+    animation: fadeInText 1s ease-in-out;
+  }
+  
+  /* Fade-in animation for heading */
+  @keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Input field styles */
+  .input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInText 1s ease-out;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #dbc765;
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.2);
+    outline: none;
+  }
+  
+  /* Password field wrapper */
+  .password-group {
+    position: relative;
+  }
+  
+  .password-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .password-wrapper input {
+    flex: 1;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: #333;
+    transition: color 0.5s;
+  }
+  
+  .toggle-password:hover {
+    color: #b85c5c;
+  }
+  
+  /* Button styles */
+  button {
+    width: 80%;
+    padding: 0.95rem;
+    background-color: #4e98a9;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #a29e1a;
+    transform: translateY(-2px);
+  }
+  
+  /* Forgot password link */
+  .forgot-password {
+    margin-top: 1rem;
+  }
+  
+  .forgot-password a {
+    color: #baba36;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+    color: #d9e675;
+  }

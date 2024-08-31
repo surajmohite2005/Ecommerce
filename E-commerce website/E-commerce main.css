@@ -1,0 +1,744 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+.buttonA{
+    background-color: rgb(200,0,0);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 1s;
+}
+.navbar {
+    height: 60px;
+    background-color: #f8f0f0;
+    color: rgb(25, 22, 22);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: #000;
+}
+
+.nav_logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url(E-commerce.png);
+    height: 50px;
+    width: 100%;
+    background-size: cover;
+}
+
+.border {
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+    color: #ffbb00; /* Accent color on hover */
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-left: 15px;
+}
+
+.add-sec {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Bar */
+.nav-search {
+    display: flex;
+    background-color: #17c0e1;
+    width: 620px;
+    height: 40px;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    border-color: orange;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-select {
+    background-color: #c6bab2;
+    width: 80px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-select:hover {
+    background-color: orange;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding: 0 10px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    border: 2px solid #dbd1b8;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.search-icon:hover {
+    color: #ffbb00;
+}
+
+span {
+    font-size: 0.7rem;
+}
+
+.nav-search:hover {
+    border: 2px solid rgb(214, 237, 225);
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i {
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.panel {
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-ops p {
+    display: inline;
+    margin-left: 15px;
+}
+
+.panel-ops {
+    width: 70%;
+    font-size: 0.85rem;
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.hero-section {
+    background-image: url(E-commerce/img/1.jpg);
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.hero-msg {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 80%;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-msg a {
+    color: #8400ff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+    padding: 20px;
+}
+
+.box {
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover::before {
+    opacity: 1;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffbb00;
+}
+
+.box-img {
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover .box-img {
+    transform: scale(1.1);
+}
+
+.box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.box-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.box-content p {
+    color: #007185;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.box-content h2:hover, 
+.box-content p:hover {
+    color: #ffbb00;
+}
+
+footer {
+    margin-top: 15px;
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.foot-panel2 {
+    background-color: #222f3d;
+    color: white;
+    padding: 15px;
+}
+
+.foot-panel2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.foot-panel2 p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.foot-panel2 a {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.foot-panel2 a:hover {
+    color: #ffbb00;
+}
+/* CSS for hero-section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.hero-slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slideShow 10s infinite;
+}
+
+.hero-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideShow {
+    0% {
+        transform: translateX(0);
+    }
+    45% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    95% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hero-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    z-index: 10;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hero-button:focus {
+    outline: none;
+}
+
+.hero-button:first-of-type {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+/* CSS for hero-section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding-top: 30vh; /* Adjust as needed */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero-section:hover .hero-image {
+    transform: scale(1.05); /* Slight zoom effect */
+    opacity: 0.9; /* Slight fade effect */
+}
+
+.hero-section:hover .hero-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .hero-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .hero-image {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.hero-slide img.active {
+    opacity: 1;
+}
+#sign{
+    text-decoration: none;
+}
+.hero-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    z-index: 10;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hero-button:focus {
+    outline: none;
+}
+
+.hero-button:first-of-type {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.hero-section{
+    height: 600px;
+}/* CSS for hero-section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Height can be adjusted to fit your needs */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover; /* Ensures the image covers the section without stretching */
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    z-index: 10;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hero-button:focus {
+    outline: none;
+}
+
+.hero-button:first-of-type {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.animated-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect: Background color change and scale up */
+.animated-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    animation: rotate 1s infinite; /* Rotate animation on hover */
+}
+
+/* Focus effect: Remove outline and add box shadow */
+.animated-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Active effect: Pulse animation when clicked */
+.animated-button:active {
+    animation: pulse 0.6s;
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Keyframes for rotate animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+

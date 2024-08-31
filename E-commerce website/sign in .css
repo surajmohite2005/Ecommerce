@@ -1,0 +1,88 @@
+body {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    background: linear-gradient(135deg, #f5a623, #f56b2a);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    transition: background 0.5s ease;
+}
+
+.form-container:hover {
+    background: linear-gradient(135deg, #f56b2a, #f5a623);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #f56b2a;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.button{
+    width: 300px;
+#username:hover{
+    transition: 2s;
+    background-color: skyblue;
+}
+#email:hover{
+    transition: 2s;
+    background-color: skyblue;
+}
+#password:hover{
+    transition: 2s;
+    background-color: skyblue;
+}
+
+button:hover {
+    background-color: #f56b2a;
+    color: #fff;
+}

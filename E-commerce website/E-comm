@@ -1,0 +1,16 @@
+// scripts.js
+
+// Function to open the product page
+function openProductPage(url) {
+    window.location.href = url;
+}
+
+// Adding event listeners to each box for hover effects (optional if you want additional JS interactions)
+document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('mouseover', function() {
+        this.style.transform = 'translateY(-10px)';
+    });
+    box.addEventListener('mouseout', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .payment-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .payment-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .payment-details label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        .payment-details input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #payment-status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* The Close Button */
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <h2>Complete Your Purchase</h2>
+        <div class="product-info">
+            <p>Payment Method :</p> <strong>Credit Card</strong>
+        
+        </div>
+        <form id="payment-form">
+            <div class="payment-details">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" required>
+                <label for="price">Price</label>
+                <input type="number" id="price" placeholder="Rs 123">
+
+                <label for="cardHolder">Cardholder Name</label>
+                <input type="text" id="cardHolder" placeholder="John Doe" required>
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+        <div id="payment-status"></div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Payment completed successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Collect the payment details
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expiryDate = document.getElementById('expiryDate').value;
+            const cvv = document.getElementById('cvv').value;
+            const cardHolder = document.getElementById('cardHolder').value;
+
+            // Placeholder for payment processing logic
+            // Example: Integrate with PayPal or Stripe here
+            // For now, just simulate a successful payment
+            setTimeout(() => {
+                document.getElementById('payment-status').textContent = "Payment Successful!";
+                document.getElementById('payment-status').style.color = "green";
+
+                // Show the modal pop-up
+                const modal = document.getElementById("payment-modal");
+                modal.style.display = "block";
+
+                // Close the modal when the user clicks the close button
+                document.querySelector(".close-button").onclick = function() {
+                    modal.style.display = "none";
+                };
+
+                // Close the modal when the user clicks outside of it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                };
+
+                // Optional: You could also redirect the user to a confirmation page or another part of your site
+                // window.location.href = "confirmation.html";
+            }, 1000);
+
+            // Reset the form fields
+            document.getElementById('payment-form').reset();
+        });
+    </script>
+</body>
+</html>

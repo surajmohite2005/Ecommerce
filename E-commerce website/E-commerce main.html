@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="E-commerce main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* CSS for logo positioning */
+        .nav-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+
+        .logo-img {
+            width: 120px; /* Adjust the size of the logo */
+            height: auto;
+        }
+
+        /* CSS for hero-section */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #efe8e8;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease-in-out;
+            animation: slideIn 2s ease-in-out infinite alternate;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            animation: fadeInOut 10s infinite;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0%, 50% {
+                opacity: 1;
+            }
+            50.1%, 100% {
+                opacity: 0;
+            }
+        }
+
+        .hero-text {
+            position: absolute;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            z-index: 10;
+            padding: 0 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* CSS for hero-section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efe8e8;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+    animation: slideIn 2s ease-in-out infinite alternate;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    animation: fadeInOut 20s infinite; /* Increased the duration to 20 seconds */
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 25% {
+        opacity: 1;
+    }
+    25.1%, 75% {
+        opacity: 0;
+    }
+    75.1%, 100% {
+        opacity: 1;
+    }
+}
+
+.hero-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    z-index: 10;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hero-button:focus {
+    outline: none;
+}
+
+/* Optional: Add additional animation for buttons */
+.hero-button:first-of-type {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+        .hero-buttons {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .hero-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .hero-button:focus {
+            outline: none;
+        }
+
+        /* Optional: Add additional animation for buttons */
+        .hero-button:first-of-type {
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* CSS for product section */
+        .shop-section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 23%;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .box-img {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .box-content h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        .box-content p {
+            margin: 0;
+            color: #007bff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .box-content p:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+        }
+
+        .foot-panel1 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .foot-panel2 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .foot-panel2 ul p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .foot-panel2 ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <script src="E-c.js"></script>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                
+            </div>
+            <div class="animated-button">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec">India</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                
+                <input type="text" placeholder="Search For Products" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="nav-signin border animated-button">
+                <a href="sign in.html" id="sign"><p><span>Hello, sign in</span></p></a>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-return border animated-button">
+                <p><span>Returns</span></p>
+                Orders
+            </div>
+            <a href="" class="nav-cart border animated-button">
+                <i class="fa-solid fa-cart-shopping"></i> Cart
+            </a>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i> All
+            </div>
+            <div class="panel-ops">
+                <p>Today's Deals</p>
+                <p>Customer Service</p>
+                <p>Registry</p>
+                <p>Sell</p>
+            </div>
+            <a href="" class="panel-deals">
+                Shop deals in Electronics
+            </a>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-slide">
+            <img src="mall.jpg" alt="">
+            <img src="mall.jpg" alt="Hero Image 2">
+        </div>
+        <div class="hero-text">Welcome to Our Store</div>
+        <div class="hero-buttons">
+            <button class="hero-button">Shop Now</button>
+            <button class="hero-button">Learn More</button>
+        </div>
+    </div>
+    <div class="shop-section">
+        <div class="box box1">
+            <a href="grocery.html"><div class="box-img" style="background-image: url('gry.jpeg');"></div></a>
+            <div class="box-content">
+                <h2>Grocery</h2>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box2">
+            <a href="Sports.html"><div class="box-img" style="background-image: url('sp.jpg');"></div></a>
+            <div class="box-content">
+                <h2>Sports</h2>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box3">
+            <a href="nutrition.html"><div class="box-img" style="background-image: url('nutr.jpeg');"></div></a>
+            <div class="box-content">
+                <h2>Nutritions</h2>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box4">
+            <a href="Electronics.html"><div class="box-img" style="background-image: url('ele.jpg');"></div></a>
+            <div class="box-content">
+                <h2>Electronic Applinces</h2>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box1">
+            <a href="clothes.html"><div class="box-img" style="background-image: url('img1.jpg');"></div></a>
+            <div class="box-content">
+                <h2>Clothes</h2>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box2">
+            <a href="Beauty products.html"><div class="box-img" style="background-image: url('img3.jpg');"></div></a>
+            <div class="box-content">
+                <h2>Furnitures</h2>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box3">
+            <a href="Pet Products.html"><div class="box-img" style="background-image: url('box1_image.jpg');"></div></a>
+            <div class="box-content">
+                <h2>Pet Products</h2>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box4">
+            <a href="b.html"><div class="box-img" style="background-image: url('img5.jpg');"></div></a>
+            <div class="box-content">
+                <h2>Beauty Products</h2>
+                <p>See more</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-panel1" id="back-to-top">Back to top</div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <li>Careers</li>
+                <li>Blog</li>
+                <li>About Us</li>
+                <li>Investor Relations</li>
+                <li> Devices</li>
+                <li> Science</li>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                
+                <li>Sell Your Services </li>
+                
+                <li>Become an Affiliate</li>
+                <li>Advertise Your Products</li>
+                <li>Self-Publish with Us</li>
+              
+            </ul>
+            <ul>
+               
+                <li>Shop with Points</li>
+                <li>Reload Your Balance</li>
+            
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                
+                <li>Your Account</li>
+                <li>Your Orders</li>
+                <li>Shipping Rates & Policies</li>
+                <li>Returns & Replacements</li>
+                <li>Manage Your Content and Devices</li>
+             
+                <li>FAQ & Help</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Add functionality to scroll to the top when "Back to top" is clicked
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

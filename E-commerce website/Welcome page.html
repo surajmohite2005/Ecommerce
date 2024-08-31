@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1c7c6f, #d4a5a5, #a9def9, #ffb6b9);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            overflow: hidden;
+        }
+
+        .welcome-container {
+            text-align: center;
+            background-color: rgba(15, 32, 96, 0.9); /* Semi-transparent background */
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #f8f6f6;
+            font-weight: bold;
+            animation: textSlide 3s ease-in-out;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #fdfcfc;
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Additional Animation for the welcome text */
+        @keyframes textSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="Loginn.html" style="text-decoration: none;"><div class="welcome-container">
+        <h1 class="welcome-text">Welcome to E-commerce</h1>
+        <p>We're glad to have you here!</p>
+    </div>
+    </a>
+</body>
+</html>
